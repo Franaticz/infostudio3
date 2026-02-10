@@ -992,6 +992,16 @@ body {
 	line-height: 1.6;
 }
 
+.pdf-link {
+	color: #0066cc;
+	text-decoration: none;
+}
+
+.pdf-link:hover,
+.pdf-link:focus-visible {
+	text-decoration: underline;
+}
+
 /* Carousel Container */
 .carousel-container {
 	position: relative;
@@ -5735,8 +5745,8 @@ iframe {
 
 .pdf-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  right: 24px;
+  bottom: 10px;
   width: 40px;
   height: 40px;
   border-radius: 999px;
@@ -5745,6 +5755,9 @@ iframe {
   color: #0f172a;
   font-size: 1.8rem;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
