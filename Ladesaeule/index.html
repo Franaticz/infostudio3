@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ladepunkte Karlsruhe – Simulation</title>
+
+  <!-- Website Styles (Navbar!) -->
+  <link rel="stylesheet" href="../tooplate-strategic-style.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- CSV + Heatmap -->
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+  <!-- Karten-spezifisches CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Platz für fixe Navbar */
+    #map {
+      height: calc(100vh - var(--nav-height, 90px));
+      margin-top: var(--nav-height, 90px);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR (IDENTISCH ZUR WEBSITE) ===== -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../index.html#home" class="logo">
+      <div class="logo-icon"></div>
+      <span>Karlsruher Ladeinfrastruktur</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#home">Start</a></li>
+      <li><a href="../index.html#services">Ziele</a></li>
+      <li><a href="../index.html#methodik">Methodik</a></li>
+      <li><a href="../index.html#about">Aktueller Stand</a></li>
+      <li><a href="../index.html#visualized">Visualisierung</a></li>
+      <li><a href="index.html">Simulation</a></li>
+      <li><a href="../index.html#survey">Umfrage</a></li>
+      <li><a href="../index.html#summary-next-steps">Zusammenfassung</a></li>
+    </ul>
+    <div class="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== MOBILE CONTROLS TOGGLE ===== -->
+<button class="controls-toggle" id="controlsToggle" aria-label="Filter öffnen">
+  <svg viewBox="0 0 24 24">
+    <line x1="4" y1="6" x2="20" y2="6"></line>
+    <line x1="4" y1="12" x2="20" y2="12"></line>
+    <line x1="4" y1="18" x2="20" y2="18"></line>
+    <circle cx="8" cy="6" r="2"></circle>
+    <circle cx="16" cy="12" r="2"></circle>
+    <circle cx="10" cy="18" r="2"></circle>
+  </svg>
+</button>
+
+<!-- ===== CONTROLS ===== -->
+<div class="controls" id="controlsPanel">
+  <label for="yearFilter">Jahr</label>
+  <select id="yearFilter">
+    <option value="2026">Ist-Stand 2026</option>
+    <option value="2030">Simulation 2030</option>
+  </select>
+
+  <div class="filter-group active" id="filterGroup">
+
+    <label for="typeFilter">Ladeart</label>
+    <select id="typeFilter">
+      <option value="all">Alle (527)</option>
+      <option value="schnell">Nur Schnelllader</option>
+      <option value="normal">Nur Normallader</option>
+    </select>
+
+    <label for="anzahlFilter">Anzahl Ladepunkte</label>
+    <select id="anzahlFilter">
+      <option value="all">Alle</option>
+      <option value="1">1</option>
+      <option value="2-3">2–3</option>
+      <option value="4plus">4+</option>
+    </select>
+
+    <label for="powerFilter">
+      Minimale Ladeleistung (<span id="powerValue">0</span> kW)
+    </label>
+    <input type="range" id="powerFilter" min="0" max="300" step="10" value="0">
+
+    <label for="viewMode">Darstellung</label>
+    <select id="viewMode">
+      <option value="marker">Punkte</option>
+      <option value="heat">Heatmap</option>
+    </select>
+
+    <label for="districtFilter">Stadtteile</label>
+    <select id="districtFilter">
+      <option value="all">Anzeigen</option>
+      <option value="Durlach">Ausblenden</option>
+    </select>
+  </div>
+</div>
+
+
+
+<!-- ===== MAP ===== -->
+<div id="map"></div>
+
+<!-- ===== FAQ BUTTON ===== -->
+<button id="faqBtn" class="faq-button">
+  <img src="faq-icon.png" alt="?" />
+</button>
+
+<!-- ===== FAQ OVERLAY ===== -->
+<div class="faq-overlay" id="faqOverlay">
+  <div class="faq-content">
+    <h2>Häufige Fragen</h2>
+
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Warum braucht Karlsruhe mehr Ladepunkte?</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-body">
+          Karlsruhe fördert klimafreundliche Mobilität. Dafür ist eine bedarfsgerechte Ladeinfrastruktur notwendig.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Unterschied Schnell- & Normalladen?</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-body">
+          Schnellladen (DC) erlaubt Ladeleistungen bis 300 kW. Normalladen (AC) eignet sich für längere Standzeiten.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Wie wurden Standorte für 2030 gewählt?</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-body">
+          Die Standorte basieren auf städtischen Konzepten, OSM-Daten und modellierten Bedarfsräumen.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Woher stammen die Daten?</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-body">
+          Rahmenkonzept Karlsruhe (2021) + OpenStreetMap.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Ist die Umsetzung realistisch?</span>
+          <span>+</span>
+        </button>
+        <div class="accordion-body">
+          Ambitioniert, aber umsetzbar bei koordinierter Planung.
+        </div>
+      </div>
+
+    </div>
+
+    <button id="closeFaq" class="close-btn">Schließen</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
+
+
+
