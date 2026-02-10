@@ -497,7 +497,7 @@ const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('in-view');
-    } else {
+    } else if (!entry.target.classList.contains('method-container')) {
       entry.target.classList.remove('in-view');
     }
   });
