@@ -617,15 +617,10 @@ body {
 }
 
 .logo-icon {
-	width: 32px;
-	height: 32px;
-	background: linear-gradient(135deg, #475569, #64748b);
-	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	font-size: 1rem;
+	width: 34px;
+	height: 34px;
+	display: block;
+	object-fit: contain;
 	flex-shrink: 0;
 }
 
