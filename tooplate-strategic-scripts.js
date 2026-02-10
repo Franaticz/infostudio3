@@ -305,6 +305,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.2 });
   
   bentoCards.forEach(card => bentoObserver.observe(card));
+
+  // Tap-to-flip on touch devices
+  const bentoTapCards = document.querySelectorAll('.bento-card');
+  const prefersTapFlip = window.matchMedia('(hover: none), (pointer: coarse)');
+
+  if (prefersTapFlip.matches && bentoTapCards.length) {
+    bentoTapCards.forEach(card => {
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a, button')) return;
+        const isFlipped = card.classList.toggle('is-flipped');
+        bentoTapCards.forEach(other => {
+          if (other !== card) other.classList.remove('is-flipped');
+        });
+      });
+    });
+  }
   
   // Counter Animation Function
   function animateCounter(counter) {

@@ -1665,8 +1665,14 @@ body {
 	transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.bento-card:hover .bento-card-inner {
+.bento-card.is-flipped .bento-card-inner {
 	transform: rotateY(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.bento-card:hover .bento-card-inner {
+		transform: rotateY(180deg);
+	}
 }
 
 .bento-card-front,
