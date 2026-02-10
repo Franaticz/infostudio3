@@ -772,24 +772,6 @@ function showResults() {
     localStorage.setItem('allSurveys', JSON.stringify(allSurveys));
 
     surveyContent.parentElement.classList.add('results-mode');
-
-    const total = allSurveys.length;
-    const counts = {};
-
-    surveyQuestions.forEach(q => {
-        q.options.forEach(opt => {
-            counts[opt] = 0;
-        });
-    });
-
-    allSurveys.forEach(survey => {
-        Object.values(survey).forEach(val => {
-            if (counts[val] !== undefined) counts[val]++;
-        });
-    });
-
-    const percent = key => total ? Math.round((counts[key] / total) * 100) : 0;
-
     const colorMap = [
         "linear-gradient(135deg, #065f46, #047857)",  // sehr positiv → dunkelgrün
         "linear-gradient(135deg, #10b981, #6ee7b7)",  // positiv → hellgrün
@@ -812,7 +794,7 @@ function showResults() {
       `<div class="survey-tab ${index === 0 ? 'active' : ''}" data-index="${index}">${tabLabels[index]}</div>`
    ).join('');
 
-   let resultHTML = `<div class="survey-thankyou">🎉⚡ Danke für deine Teilnahme!</div><div class="survey-subtitle" style="text-align:center; font-size:1.1rem; color:#1a202c; margin-bottom:1.5rem;">So haben die anderen Besucher abgestimmt:</div><div class="survey-tabs">${tabsHTML}</div><div class="survey-chart-container"></div>`;
+   let resultHTML = `<div class="survey-thankyou">Danke für deine Teilnahme!</div><div class="survey-subtitle" style="text-align:center; font-size:1.1rem; color:#1a202c; margin-bottom:1.5rem;">So haben die anderen Besucher abgestimmt:</div><div class="survey-tabs">${tabsHTML}</div><div class="survey-chart-container"></div>`;
 
     surveyContent.innerHTML = resultHTML;
 
@@ -830,6 +812,22 @@ function showResults() {
     // Funktion zum Rendern des Diagramms
     function renderChart(index) {
         const q = surveyQuestions[index];
+        const counts = {};
+        let total = 0;
+
+        q.options.forEach(opt => {
+            counts[opt] = 0;
+        });
+
+        allSurveys.forEach(survey => {
+            const val = survey[q.id];
+            if (val !== undefined && counts[val] !== undefined) {
+                counts[val]++;
+                total++;
+            }
+        });
+
+        const percent = key => total ? Math.round((counts[key] / total) * 100) : 0;
         const chartHTML = `<h4>${q.question}</h4>` + q.options.map((opt, optIndex) => {
             const p = percent(opt);
             return `
@@ -913,3 +911,4 @@ if (timeline) {
     });
   }, 500);
 }
+
