@@ -4324,15 +4324,17 @@ body {
 
 /* Card soll NICHT clippen */
 .ios-card{
-  height: 600px;          /* alle Cards gleich groß */
-  overflow: hidden;       /* Card darf innen clippen, aber NICHT das scrollen verhindern */
+  min-height: 600px;
+  height: auto;
+  overflow: hidden;       /* runde Ecken sauber halten */
 }
 
 
 .ios-card-grid {
     display: grid;
     grid-template-columns: 420px 1fr; /* links fix, rechts flexibel */
-    height: 100%;
+    min-height: 600px;
+    height: auto;
     align-items: stretch;
 }
 
@@ -4358,7 +4360,8 @@ body {
 
 /* DAS ist der Scroll-Container */
 .ios-chart-scroll{
-  height: 100%;          /* füllt die Card-Höhe */
+  height: auto;
+  max-height: 520px;
   overflow-y: auto;      /* Scrollbar */
   overflow-x: hidden;
   padding-right: 18px;    /* mehr Luft zur Scrollbar */
@@ -4375,8 +4378,8 @@ body {
   border: 0;
 }
 
-.ios-card{ height: 600px; overflow: hidden; }
-.ios-card-grid{ height: 100%; align-items: stretch; }
+.ios-card{ min-height: 600px; height: auto; overflow: hidden; }
+.ios-card-grid{ min-height: 600px; height: auto; align-items: stretch; }
 
 /* =========================
    METHODIK SECTION (füge ans Ende deiner tooplate-strategic-style.css)
@@ -5976,6 +5979,7 @@ iframe {
     height: 78vh;
   }
 }
+
 
 
 
