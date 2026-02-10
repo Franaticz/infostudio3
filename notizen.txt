@@ -1,0 +1,53 @@
+
+
+
+
+
+Mobile Ansicht funktioniert bei der Karte mal so gar nicht. 
+
+
+Bei Simulation Section noch ein Vorschaubild der Karte einfügen.
+
+Farbpalette nochmal etwas anpassen. 
+
+Diagramme für "Ziele visualisiert" erstellen und einfügen. (Am besten alle die selben Größe)
+Außerdem sollen die Diagramme sich den Containern anpassen (skalieren); nicht die Containern den Bildern. 
+
+Aktueller Stand -> Die Cards noch mit Inhalt füllen.
+
+"Was sind die Ziele" -> Stichpunkte-Icons einfärben
+
+Rotierende Titel in Hero Section mit Untertitel anpassen und mit Inhalt füllen.
+
+Icon für Website/Logo?
+
+Video Playback Speed vlt. sogar halbieren (0.5x) damit Effekt länger hält?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Diagramm 1 (Status quo und die Anteile der Ladeinfrastruktur in Karlsruhe):
+
+Metrik;Kategorie;Wert;Einheit;Bezug (Datum/Standort)
+Bestand Pkw;Gesamtbestand;141341;Fahrzeuge;Karlsruhe (2023)
+Bestand E-Fahrzeuge (BEV + PHEV);Anteil am Pkw-Bestand;9118;Fahrzeuge;Karlsruhe (2023)
+Anteil E-Fahrzeuge am Pkw-Bestand;;6.5;Prozent;Karlsruhe (2023)
+Bestand Ladepunkte;Öffentlich zugänglich (Gesamt);480;Ladepunkte;Karlsruhe (Mai 2025)
+Bestand Ladepunkte;Im öffentlichen Raum;68;Ladepunkte;Karlsruhe (Mai 2025)
+Anteil Schnellladesäulen;Am Gesamtbestand;21;Prozent;Karlsruhe (Mai 2025)
+Vergleich Schnellladeanteil;Stuttgart;6;Prozent;Großstädte in Baden-Württemberg
+Vergleich Schnellladeanteil;Heidelberg;13;Prozent;Großstädte in Baden-Württemberg
+Vergleich Schnellladeanteil;Freiburg im Breisgau;14;Prozent;Großstädte in Baden-Württemberg

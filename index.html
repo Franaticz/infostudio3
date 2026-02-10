@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karlsruher Zukunft der Elektromobilität</title>
+    <link rel="stylesheet" href="tooplate-strategic-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon"></div>
+                <span>Karlsruher Ladeinfrastruktur</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Start</a></li>
+                <li><a href="#services">Ziele</a></li>
+                <li><a href="#methodik">Methodik</a></li>
+                <li><a href="#about">Aktueller Stand</a></li>
+                <li><a href="#visualized">Visualisierung</a></li>
+                <li><a href="#simulation">Simulation</a></li>
+                <li><a href="#survey">Umfrage</a></li>
+                <li><a href="#summary-next-steps">Zusammenfassung</a></li>
+
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+            <!-- Hero Section -->
+    <section id="home" class="hero">
+       <video class="hero-video" autoplay muted loop playsinline>
+    <source src="Videos/LP_Traffic.mp4" type="video/mp4">
+</video>
+
+<div class="hero-content">
+    <h1 id="hero-headline">Karlsruher Zukunft<br>der Ladeinfrastruktur</h1>
+    <p id="hero-paragraph">
+Die Ladeinfrastruktur ist entscheidend für den Hochlauf der Elektromobilität. Diese Website zeigt den Stand der öffentlichen Ladepunkte in Karlsruhe (Stichtag: 01.01.2026: 527 Ladepunkte – damit sind einzelne Anschlüsse/Steckplätze gemeint, nicht „Säulen“) und visualisiert einen möglichen Ausbaupfad bis 2030 – als Diskussionsgrundlage, nicht als verbindliche Planung.
+    </p>
+
+    <a href="#services" class="cta-button">Analyse starten</a>
+</div>
+
+    </section>
+
+
+    
+    <!-- Services Section -->
+    <section id="services" class="services-modern">
+        <div class="services-modern-container">
+            <div class="services-modern-header">
+                <h2 class="services-modern-title">Was sind die Ziele?</h2>
+                <p class="services-modern-subtitle">Die folgenden Leitprinzipien stammen aus dem Rahmenkonzept der Stadt Karlsruhe und dienen hier als Bewertungsmaßstab für Ist-Zustand und Ausbau bis 2030.</p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-btn-prev" aria-label="Vorherige Karte">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                
+                <div class="services-cards-wrapper">
+                <!-- Card 1 -->
+                <div class="service-card" data-index="1">
+                    <div class="card-number">01</div>
+                    <div class="card-icon"><span class="material-symbols-rounded">ev_station</span></div>
+                    <h3 class="card-title">Bedarfsgerechter Ausbau</h3>
+                    <p class="card-keyline"><strong>Kernaussage:</strong> Öffentliche Ladepunkte ergänzen private – Fokus auf Haushalte ohne Stellplatz.</p>
+                    <p class="card-description">Die Stadt Karlsruhe verfolgt das Ziel, die öffentliche Ladeinfrastruktur bedarfsgerecht auszubauen. Sie ergänzt private Lademöglichkeiten und richtet sich insbesondere an Menschen ohne eigenen Stellplatz.</p>
+                    <ul class="card-features">
+                        <li>Grundversorgung in allen Stadtteilen</li>
+                        <li>Ergänzung zur privaten Ladeinfrastruktur</li>
+                        <li>Fokus auf Haushalte ohne eigene Lademöglichkeit</li>
+                        <li>Unterstützung der Elektromobilität im Alltag</li>
+                    </ul>
+                    <div class="card-sources">
+                        <a href="#" id="pdfLinkQ1" class="source-link" title="Quelle: Rahmenkonzept 2025 - ??ffnet PDF auf Seite 5">(Quelle)</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card" data-index="2">
+                    <div class="card-number">02</div>
+                    <div class="card-icon"><span class="material-symbols-rounded">bolt</span></div>
+                    <h3 class="card-title">Schnelladen mit Augenmaß</h3>
+                    <p class="card-keyline"><strong>Kernaussage:</strong> Schnelllader dahin, wo man sowieso vorbeifährt – weniger Umwege, kürzere Belegung.</p>
+                    <p class="card-description">Schnellladestationen sollen bevorzugt an verkehrsgünstigen Standorten entstehen. Durch kurze Ladezeiten wird die Flächennutzung optimiert und der Parksuchverkehr reduziert.</p>
+                    <ul class="card-features">
+                        <li>Aufbau von Schnellade-Hubs</li>
+                        <li>Lage an Hauptverkehrsachsen</li>
+                        <li>Minimierung von Um- und Mehrwegen</li>
+                        <li>Reduzierung des Flächenverbrauchs</li>
+                    </ul>
+                    <div class="card-sources">
+                        <a href="#" id="pdfLinkQ2" class="source-link" title="Quelle: Rahmenkonzept 2025 - ??ffnet PDF auf Seite 9">(Quelle)</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card" data-index="3">
+                    <div class="card-number">03</div>
+                    <div class="card-icon"><span class="material-symbols-rounded">home</span></div>
+                    <h3 class="card-title">Langsamladen für Wohnquartiere</h3>
+                    <p class="card-keyline"><strong>Kernaussage:</strong> Wohnquartiere zuerst – langsames Laden nah am Wohnen.</p>
+                    <p class="card-description">Langsamladestationen dienen vor allem der Versorgung von Anwohnerinnen und Anwohnern, die nicht im privaten Raum laden können. Der Ausbau erfolgt schrittweise und bedarfsorientiert.</p>
+                    <ul class="card-features">
+                        <li>Versorgung in dicht bebauten Quartieren</li>
+                        <li>Besonderer Fokus auf Gründerzeitviertel</li>
+                        <li>Bevorzugt abseits des Straßenraums</li>
+                        <li>Kontrollierter Ausbau nach Leitfaden</li>
+                    </ul>
+                    <div class="card-sources">
+                        <a href="#" id="pdfLinkQ3" class="source-link" title="Quelle: Rahmenkonzept 2025 - ??ffnet PDF auf Seite 10">(Quelle)</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card" data-index="4">
+                    <div class="card-number">04</div>
+                    <div class="card-icon"><span class="material-symbols-rounded">eco</span></div>
+                    <h3 class="card-title">Laden mit erneuerbarer Energie</h3>
+                    <p class="card-keyline"><strong>Kernaussage:</strong> Ökostrom maximiert den Klimanutzen der Ladeinfrastruktur.</p>
+                    <p class="card-description">Der Einsatz von Ökostrom erhöht den klimarelevanten Nutzen der Elektromobilität erheblich. Karlsruhe strebt an, Ladeinfrastruktur mit Strom aus erneuerbaren Energien zu betreiben.</p>
+                    <ul class="card-features">
+                        <li>Reduktion von CO₂- und NO₂-Emissionen</li>
+                        <li>Stärkung der lokalen Energiewende</li>
+                        <li>Ganzheitlicher Klimaschutzansatz</li>
+                        <li>Verknüpfung mit städtischen Klimazielen</li>
+                    </ul>
+                    <div class="card-sources">
+                        <a href="#" id="pdfLinkQ4" class="source-link" title="Quelle: Rahmenkonzept 2025 - ??ffnet PDF auf Seite 7">(Quelle)</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="service-card" data-index="5">
+                    <div class="card-number">05</div>
+                    <div class="card-icon"><span class="material-symbols-rounded">touch_app</span></div>
+                    <h3 class="card-title">Laden soll einfach sein</h3>
+                    <p class="card-keyline"><strong>Kernaussage:</strong> Barrierefrei, transparent und ohne Zugangshürden.</p>
+                    <p class="card-description">Öffentliche Ladeinfrastruktur soll für alle Menschen leicht nutzbar sein. Die Stadt legt Wert auf barrierefreien, diskriminierungsfreien Zugang und transparente Nutzung.</p>
+                    <ul class="card-features">
+                        <li>Barrierefreie Gestaltung</li>
+                        <li>Öffentliche Zugänglichkeit rund um die Uhr</li>
+                        <li>Einheitliche Standards</li>
+                        <li>Nutzung ohne Zugangshürden</li>
+                    </ul>
+                    <div class="card-sources">
+                        <a href="#" id="pdfLinkQ5" class="source-link" title="Quelle: Rahmenkonzept 2025 - ??ffnet PDF auf Seite 7">(Quelle)</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="service-card" data-index="6">
+                    <div class="card-number">06</div>
+                    <div class="card-icon"><span class="material-symbols-rounded">shield</span></div>
+                    <h3 class="card-title">Schutz des öffentlichen Raums</h3>
+                    <p class="card-keyline"><strong>Kernaussage:</strong> Kein privates Laden im Straßenraum – fair für alle.</p>
+                    <p class="card-description">Der öffentliche Raum steht allen zur Verfügung. Private Ladepunkte auf öffentlichen Flächen werden nicht vorgesehen, um Gemeingebrauch und Fairness zu wahren.</p>
+                    <ul class="card-features">
+                        <li>Keine privaten Ladepunkte im Straßenraum</li>
+                        <li>Gleichberechtigte Nutzung öffentlicher Flächen</li>
+                        <li>Vermeidung zusätzlicher Parkkonkurrenz</li>
+                        <li>Integration in die Stadt- und Verkehrsplanung</li>
+                    </ul>
+                    <div class="card-sources">
+                        <a href="#" id="pdfLinkQ6" class="source-link" title="Quelle: Rahmenkonzept 2025 - ??ffnet PDF auf Seite 7">(Quelle)</a>
+                    </div>
+                </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-next" aria-label="Nächste Karte">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+            
+            <div class="carousel-dots">
+                <button class="carousel-dot active" data-index="0"></button>
+                <button class="carousel-dot" data-index="1"></button>
+                <button class="carousel-dot" data-index="2"></button>
+                <button class="carousel-dot" data-index="3"></button>
+                <button class="carousel-dot" data-index="4"></button>
+                <button class="carousel-dot" data-index="5"></button>
+            </div>
+        </div>
+    </section>
+
+<!-- =========================
+     METHODIK + RECHENWEG
+     (fuege diese Section an der Stelle ein, wo aktuell <section id="methodik" ...>...</section> steht)
+========================== -->
+<section id="methodik" class="method-section">
+  <div class="method-container">
+    <div class="method-header">
+      <h2 class="section-title fade-in">Herleitung des Zielwertes 2030</h2>
+      <div class="method-subtitle-wrap">
+        <p class="method-subtitle">
+          Dieser Abschnitt macht die Berechnung eines theoretischen Zielwertes f&uuml;r &ouml;ffentliche Ladepunkte in Karlsruhe
+          (konservatives Szenario) transparent. Alle Werte sind gerundet und dienen der Einordnung &ndash; keine verbindliche Bedarfs-
+          oder Netzplanung.
+          <button class="method-assumption-trigger" type="button" aria-label="Grundlagen anzeigen" aria-expanded="false" aria-controls="method-assumption-content">
+            <span class="material-symbols-rounded">info</span>
+          </button>
+        </p>
+        <div id="method-assumption-content" class="method-assumption-content" hidden>
+          <div class="method-assumption-box">
+            <p class="method-assumption-note">
+              <strong>Begriffe:</strong> EV = Elektrofahrzeuge (BEV + Plug-in-Hybride/PHEV). BEV = rein batterieelektrisch.
+            </p>
+            <div class="method-assumption-col">
+              <h4>Was ist gemessen / aus Quellen?</h4>
+              <ul>
+                <li>Pkw-Bestand Karlsruhe (2023)</li>
+                <li>EV-Anteil (BEV + PHEV)</li>
+                <li>&Ouml;ffentliche Ladepunkte: 527 (Stichtag 01.01.2026, BNetzA)</li>
+              </ul>
+            </div>
+            <div class="method-assumption-col">
+              <h4>Was ist eine Annahme im Modell?</h4>
+              <ul>
+                <li>+12% Nettozuwachs EV pro Jahr (konservativ)</li>
+                <li>F&ouml;rderimpuls 2026&ndash;2029: +740 EV/Jahr (Proxy)</li>
+                <li>Planungskennzahl: 15 EV je &ouml;ffentlichem Ladepunkt</li>
+                <li>Optional: 80/20 AC/DC</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick facts row -->
+    <div class="method-kpi-row">
+      <div class="method-kpi">
+        <div class="method-kpi-top">
+          <span class="method-kpi-icon"><span class="material-symbols-rounded">electric_car</span></span>
+          <span class="method-kpi-label">EV-Bestand 2023</span>
+        </div>
+        <div class="method-kpi-main">
+          <span class="method-kpi-value"><span class="counter" data-count="9118">0</span></span>
+          <span class="method-kpi-unit">Fahrzeuge</span>
+        </div>
+        <p class="method-kpi-note">Baseline aus Pkw-Bestand und EV-Anteil.</p>
+      </div>
+
+      <div class="method-kpi">
+        <div class="method-kpi-top">
+          <span class="method-kpi-icon"><span class="material-symbols-rounded">trending_up</span></span>
+          <span class="method-kpi-label">EV-Prognose 2030</span>
+        </div>
+        <div class="method-kpi-main">
+          <span class="method-kpi-value"><span class="counter" data-count="24107">0</span></span>
+          <span class="method-kpi-unit">Fahrzeuge</span>
+        </div>
+        <p class="method-kpi-note">Konservativ fortgeschrieben inkl. F&ouml;rderimpuls.</p>
+      </div>
+
+      <div class="method-kpi">
+        <div class="method-kpi-top">
+          <span class="method-kpi-icon"><span class="material-symbols-rounded">flag</span></span>
+          <span class="method-kpi-label">Zielwert 2030</span>
+        </div>
+        <div class="method-kpi-main">
+          <span class="method-kpi-value"><span class="counter" data-count="1600">0</span></span>
+          <span class="method-kpi-unit">Ladepunkte</span>
+        </div>
+        <p class="method-kpi-note">Theoretischer Bedarf aus 15 EV je Ladepunkt.</p>
+      </div>
+
+      <div class="method-kpi">
+        <div class="method-kpi-top">
+          <span class="method-kpi-icon"><span class="material-symbols-rounded">add_circle</span></span>
+          <span class="method-kpi-label">Zus&auml;tzlicher Ausbau</span>
+        </div>
+        <div class="method-kpi-main">
+          <span class="method-kpi-value"><span class="counter" data-count="1073">0</span></span>
+          <span class="method-kpi-unit">Ladepunkte</span>
+        </div>
+        <p class="method-kpi-note">Zielwert 1.600 minus Ist-Stand ~527 (BNetzA).</p>
+      </div>
+    </div>
+
+    <!-- Two-column modern layout -->
+    <div class="method-grid">
+      <!-- Left: Stepper -->
+      <div class="method-card method-card-large">
+        <div class="method-card-head">
+          <div class="method-card-title">
+            <span class="method-card-icon"><span class="material-symbols-rounded">psychology</span></span>
+            <h3>Rechenweg in 7 Schritten</h3>
+          </div>
+          <button class="method-chip" type="button" data-method-toggle="all">
+            Alle Details &ouml;ffnen
+          </button>
+        </div>
+        <p class="method-stepper-subtitle">Wie werden die Zielwerte ermittelt?</p>
+
+        <ol class="method-stepper method-accordion">
+          <!-- STEP 1 -->
+          <li class="method-step">
+            <div class="method-step-index">1</div>
+            <div class="method-step-body">
+              <div class="method-step-top">
+                <h4>Ausgangspunkt: Pkw-Bestand 2023</h4>
+                <span class="method-tag">Baseline</span>
+              </div>
+              <p class="method-step-text">
+                Baseline f&uuml;r die Prognose sind <strong>141.341 Pkw (2023)</strong> und ein
+                <strong>EV-Anteil von 6,5&nbsp;%</strong>. Daraus ergeben sich <strong>9.118 elektrifizierte Fahrzeuge</strong>.
+              </p>
+
+              <details class="method-detail" data-method-detail>
+                <summary>
+                  <span>Details &amp; Rechenweg</span>
+                  <span class="method-summary-badge">Quelle: Rahmenkonzept</span>
+                </summary>
+                <div class="method-details">
+                  <div class="method-mini-grid">
+                    <div class="method-mini">
+                      <span class="method-mini-label">Pkw-Bestand (2023)</span>
+                      <span class="method-mini-value">141.341</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">EV-Anteil (BEV + PHEV)</span>
+                      <span class="method-mini-value">6,5&nbsp;%</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">EV-Bestand 2023</span>
+                      <span class="method-mini-value">9.118</span>
+                    </div>
+                  </div>
+
+                  <div class="method-formula">
+                    <div class="method-formula-head">
+                      <span class="method-formula-icon">&#8721;</span>
+                      <span class="method-formula-title">Formel</span>
+                    </div>
+                    <div class="method-formula-body">
+                      <div class="method-eq">
+                        <span class="method-eq-left">141.341 &times; 0,065</span>
+                        <span class="method-eq-mid">=</span>
+                        <span class="method-eq-right">9.118</span>
+                      </div>
+                      <div class="method-eq-sub">Gerundeter Startwert f&uuml;r die Hochrechnung.</div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <!-- STEP 2 -->
+          <li class="method-step">
+            <div class="method-step-index">2</div>
+            <div class="method-step-body">
+              <div class="method-step-top">
+                <h4>Konservativer Nettozuwachs</h4>
+                <span class="method-tag">Annahme</span>
+              </div>
+              <p class="method-step-text">
+                Im konservativen Szenario wird ein <strong>j&auml;hrlicher Nettozuwachs von 12&nbsp;%</strong> angenommen
+                (deutlich unter fr&uuml;hen Markthochlaufphasen).
+              </p>
+
+              <details class="method-detail" data-method-detail>
+                <summary>
+                  <span>Details &amp; Begr&uuml;ndung</span>
+                  <span class="method-summary-badge">Konservativ</span>
+                </summary>
+                <div class="method-details">
+                  <ul class="method-bullets">
+                    <li>Ber&uuml;cksichtigt m&ouml;gliche Marktabk&uuml;hlung und S&auml;ttigung.</li>
+                    <li>Gleichzeitig kompatibel mit weiterhin steigenden politischen Zielvorgaben.</li>
+                    <li>Plausibilisiert durch Marktbeobachtungen (KBA / IEA), konservativ abgeschw&auml;cht.</li>
+                  </ul>
+
+                  <div class="method-formula" style="margin-top: 12px;">
+                    <div class="method-formula-head">
+                      <span class="method-formula-icon">&#8721;</span>
+                      <span class="method-formula-title">Formel</span>
+                    </div>
+                    <div class="method-formula-body">
+                      <div class="method-eq">
+                        <span class="method-eq-left">EV<sub>t</sub> = EV<sub>t-1</sub> &times; 1,12</span>
+                      </div>
+                      <div class="method-eq-sub">Nettozuwachs pro Jahr (ohne F&ouml;rderbonus).</div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <!-- STEP 3 -->
+          <li class="method-step">
+            <div class="method-step-index">3</div>
+            <div class="method-step-body">
+              <div class="method-step-top">
+                <h4>Zusatzannahme: F&ouml;rderimpuls ab 2026</h4>
+                <span class="method-tag">Annahme</span>
+              </div>
+              <p class="method-step-text">
+                F&uuml;r 2026&ndash;2029 wird ein zus&auml;tzlicher <strong>Bonus von +740 EV/Jahr</strong> angesetzt, abgeleitet aus einem bundesweiten F&ouml;rderprogramm.
+                Der Karlsruhe-Anteil wird dabei <strong>grob &uuml;ber den Bev&ouml;lkerungsanteil als Proxy</strong> skaliert (konservative Vereinfachung).
+              </p>
+
+              <details class="method-detail" data-method-detail>
+                <summary>
+                  <span>Details &amp; Anteil Karlsruhe</span>
+                  <span class="method-summary-badge">2026&ndash;2029</span>
+                </summary>
+                <div class="method-details">
+                  <div class="method-mini-grid">
+                    <div class="method-mini">
+                      <span class="method-mini-label">Bundesprogramm</span>
+                      <span class="method-mini-value">800.000 Fahrzeuge</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">Anteil Karlsruhe</span>
+                      <span class="method-mini-value">0,37&nbsp;%</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">Karlsruhe gesamt</span>
+                      <span class="method-mini-value">2.960 Fahrzeuge</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">Pro Jahr (2026&ndash;2029)</span>
+                      <span class="method-mini-value">+740</span>
+                    </div>
+                  </div>
+
+                  <div class="method-formula" style="margin-top: 12px;">
+                    <div class="method-formula-head">
+                      <span class="method-formula-icon">&#8721;</span>
+                      <span class="method-formula-title">Formel</span>
+                    </div>
+                    <div class="method-formula-body">
+                      <div class="method-eq">
+                        <span class="method-eq-left">800.000 &times; 0,0037 &divide; 4</span>
+                        <span class="method-eq-mid">=</span>
+                        <span class="method-eq-right">740/Jahr</span>
+                      </div>
+                      <div class="method-eq-sub">Bev&ouml;lkerungsanteil Karlsruhe als konservative Proxy-Annahme.</div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <!-- STEP 4 -->
+          <li class="method-step">
+            <div class="method-step-index">4</div>
+            <div class="method-step-body">
+              <div class="method-step-top">
+                <h4>Projektion EV-Bestand bis 2030</h4>
+                <span class="method-tag">Berechnung</span>
+              </div>
+              <p class="method-step-text">
+                Der EV-Bestand wird j&auml;hrlich fortgeschrieben. In den Jahren 2026&ndash;2029 kommt der Bonus hinzu.
+                Ergebnis: <strong>24.107 EV im Jahr 2030</strong>.
+              </p>
+
+              <details class="method-detail" data-method-detail>
+                <summary>
+                  <span>Details &amp; Jahreswerte</span>
+                  <span class="method-summary-badge">Gerundet</span>
+                </summary>
+                <div class="method-details">
+                  <div class="method-formula">
+                    <div class="method-formula-head">
+                      <span class="method-formula-icon">&#8721;</span>
+                      <span class="method-formula-title">Gesamtformel</span>
+                    </div>
+                    <div class="method-formula-body">
+                      <div class="method-eq">
+                        <span class="method-eq-left">EV<sub>t</sub> = EV<sub>t-1</sub> &times; 1,12 + Bonus<sub>t</sub></span>
+                      </div>
+                      <div class="method-eq-sub">Bonus = +740/Jahr (nur 2026&ndash;2029).</div>
+                    </div>
+                  </div>
+
+                  <div class="method-table-wrap">
+                    <table class="method-table">
+                      <thead>
+                        <tr>
+                          <th>Jahr</th>
+                          <th>EV (BEV + PHEV)</th>
+                          <th>Bonus</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>2023</td><td>9.118</td><td>&ndash;</td></tr>
+                        <tr><td>2024</td><td>10.212</td><td>&ndash;</td></tr>
+                        <tr><td>2025</td><td>11.438</td><td>&ndash;</td></tr>
+                        <tr><td>2026</td><td>13.548</td><td>+740</td></tr>
+                        <tr><td>2027</td><td>15.912</td><td>+740</td></tr>
+                        <tr><td>2028</td><td>18.559</td><td>+740</td></tr>
+                        <tr><td>2029</td><td>21.524</td><td>+740</td></tr>
+                        <tr><td><strong>2030</strong></td><td><strong>24.107</strong></td><td>&ndash;</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <!-- STEP 5 -->
+          <li class="method-step">
+            <div class="method-step-index">5</div>
+            <div class="method-step-body">
+              <div class="method-step-top">
+                <h4>Ableitung Ladepunktbedarf 2030</h4>
+                <span class="method-tag">Berechnung</span>
+              </div>
+              <p class="method-step-text">
+                Mit einer Planungskennzahl von <strong>15 EV je &ouml;ffentlichem Ladepunkt</strong> ergibt sich ein
+                theoretischer Bedarf von <strong>ca. 1.600 Ladepunkten</strong>.
+              </p>
+
+              <details class="method-detail" data-method-detail>
+                <summary>
+                  <span>Details &amp; Quotient</span>
+                  <span class="method-summary-badge">IEA-Richtwerte</span>
+                </summary>
+                <div class="method-details">
+                  <div class="method-formula">
+                    <div class="method-formula-head">
+                      <span class="method-formula-icon">&#8721;</span>
+                      <span class="method-formula-title">Formel</span>
+                    </div>
+                    <div class="method-formula-body">
+                      <div class="method-eq">
+                        <span class="method-eq-left">24.107 &divide; 15</span>
+                        <span class="method-eq-mid">=</span>
+                        <span class="method-eq-right">1.607 &asymp; 1.600</span>
+                      </div>
+                      <div class="method-eq-sub">Konservative Quote (10&ndash;15 EV/Ladepunkt international).</div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <!-- STEP 6 -->
+          <li class="method-step">
+            <div class="method-step-index">6</div>
+            <div class="method-step-body">
+              <div class="method-step-top">
+                <h4>Abgleich mit heutigem Bestand</h4>
+                <span class="method-tag">Abgleich</span>
+              </div>
+              <p class="method-step-text">
+                Der aktuelle Bestand liegt bei <strong>ca. 527 &ouml;ffentlichen Ladepunkten</strong> (BNetzA, 01.01.2026). Bis 2030 ergibt sich
+                ein zus&auml;tzlicher Bedarf von <strong>rund 1.073 Ladepunkten</strong>
+                (&asymp; 215 pro Jahr, 2026&ndash;2030).
+              </p>
+
+              <details class="method-detail" data-method-detail>
+                <summary>
+                  <span>Details &amp; Ausbaupfad</span>
+                  <span class="method-summary-badge">BNetzA-Stichtag</span>
+                </summary>
+                <div class="method-details">
+                  <div class="method-mini-grid">
+                    <div class="method-mini">
+                      <span class="method-mini-label">Ist-Stand</span>
+                      <span class="method-mini-value">527 Ladepunkte</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">Zielwert 2030</span>
+                      <span class="method-mini-value">1.600 Ladepunkte</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">Zusatzbedarf</span>
+                      <span class="method-mini-value">1.073 Ladepunkte</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">Pro Jahr (2026&ndash;2030)</span>
+                      <span class="method-mini-value">~215</span>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <!-- STEP 7 -->
+          <li class="method-step">
+            <div class="method-step-index">7</div>
+            <div class="method-step-body">
+              <div class="method-step-top">
+                <h4>Optionale Aufteilung nach Ladeart</h4>
+                <span class="method-tag">Optional</span>
+              </div>
+              <p class="method-step-text">
+                Zur Einordnung kann der Bedarf nach Ladeart aufgeteilt werden:
+                <strong>80&nbsp;% AC</strong> und <strong>20&nbsp;% DC</strong> (ca. 1.280 AC / 320 DC).
+              </p>
+
+              <details class="method-detail" data-method-detail>
+                <summary>
+                  <span>Details &amp; Verteilung</span>
+                  <span class="method-summary-badge">IEA</span>
+                </summary>
+                <div class="method-details">
+                  <div class="method-mini-grid">
+                    <div class="method-mini">
+                      <span class="method-mini-label">Gesamt</span>
+                      <span class="method-mini-value">1.600 Ladepunkte</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">AC (80&nbsp;%)</span>
+                      <span class="method-mini-value">1.280</span>
+                    </div>
+                    <div class="method-mini">
+                      <span class="method-mini-label">DC (20&nbsp;%)</span>
+                      <span class="method-mini-value">320</span>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Right: Summary -->
+      <div class="method-card method-card-sticky">
+        <div class="method-card-head">
+          <div class="method-card-title">
+            <span class="method-card-icon"><span class="material-symbols-rounded">description</span></span>
+            <h3>Quellen &amp; Annahmen</h3>
+          </div>
+        </div>
+
+        <div class="method-copybox method-short-summary" id="methodikShortText">
+          <p><strong>Kurzfassung:</strong> Die Hochrechnung nutzt den EV‑Bestand 2023, schreibt ihn konservativ mit +12&nbsp;% p.&nbsp;a. fort
+          und ber&uuml;cksichtigt 2026&ndash;2029 einen F&ouml;rderimpuls. Daraus ergibt sich f&uuml;r 2030 ein EV‑Bestand von rund 24.107.
+          Mit 15 EV je &ouml;ffentlichem Ladepunkt resultiert ein Bedarf von ca. 1.600 Ladepunkten, also rund 1.073 zus&auml;tzliche
+          bis 2030.</p>
+        </div>
+
+        <div class="method-sourcebox">
+          <div class="method-source-title">Quellen &amp; Annahmen</div>
+          <ul class="method-source-list">
+            <li><strong>Rahmenkonzept E-Ladeinfrastruktur Karlsruhe (Fortschreibung 2025):</strong> Pkw-Bestand 2023, EV-Anteil, Ladepunkte.</li>
+            <li><strong>Bundesregierung/Bundesministerium (Beschlusslage 2024):</strong> F&ouml;rdervolumen 2026&ndash;2029.</li>
+            <li><strong>IEA / internationale Richtwerte:</strong> 10&ndash;15 EV je Ladepunkt; 80/20 AC/DC.</li>
+          </ul>
+          <div class="method-note">
+            Hinweis: Die Rechnung ist konservativ und dient der Einordnung; Abweichungen durch Rundung m&ouml;glich.
+          </div>
+        </div>
+
+        <div class="method-micro">
+          <div class="method-micro-left">
+            <span class="method-micro-icon"><span class="material-symbols-rounded">info</span></span>
+            <span class="method-micro-text">
+              <strong>Transparenz:</strong> Alle Schritte sind aufklappbar, die Kurztexte zeigen die Kernaussage auch im
+              geschlossenen Zustand.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimal JS fuer Accordion + Copy -->
+  <script>
+    (function() {
+      const toggleAllBtn = document.querySelector('[data-method-toggle="all"]');
+      const detailItems = Array.from(document.querySelectorAll('[data-method-detail]'));
+      const methodGrid = document.querySelector('.method-grid');
+      const assumptionTrigger = document.querySelector('.method-assumption-trigger');
+      const assumptionContent = document.getElementById('method-assumption-content');
+
+      function setAll(open) {
+        detailItems.forEach((detail) => {
+          detail.open = open;
+          if (!open) {
+            detail.removeAttribute('open');
+          }
+        });
+        if (methodGrid) {
+          methodGrid.classList.toggle('is-expanded', open);
+        }
+        if (toggleAllBtn) {
+          toggleAllBtn.innerHTML = open ? 'Alle Details schlie&szlig;en' : 'Alle Details &ouml;ffnen';
+          toggleAllBtn.setAttribute('data-open', open ? 'true' : 'false');
+        }
+      }
+
+      if (toggleAllBtn && detailItems.length) {
+        setAll(false);
+        window.addEventListener('pageshow', () => setAll(false));
+        toggleAllBtn.addEventListener('click', () => {
+          const shouldOpen = !detailItems.every((detail) => detail.open);
+          setAll(shouldOpen);
+        });
+
+        detailItems.forEach((detail) => {
+          detail.addEventListener('toggle', () => {
+            const allOpen = detailItems.every((item) => item.open);
+            toggleAllBtn.innerHTML = allOpen ? 'Alle Details schlie&szlig;en' : 'Alle Details &ouml;ffnen';
+          });
+        });
+      }
+
+      if (assumptionTrigger && assumptionContent) {
+        assumptionTrigger.addEventListener('click', () => {
+          const isOpen = !assumptionContent.hasAttribute('hidden');
+          if (isOpen) {
+            assumptionContent.setAttribute('hidden', '');
+          } else {
+            assumptionContent.removeAttribute('hidden');
+          }
+          assumptionTrigger.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+
+      // Copy removed
+    })();
+  </script>
+</section>
+
+
+
+
+
+    <!-- About Section - Bento Grid Stats -->
+    <section id="about" class="stats-section">
+        <!-- SVG Gradient Definitions -->
+        <svg width="0" height="0" style="position:absolute">
+            <defs>
+                <linearGradient id="gradient-main" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#06c"/>
+                    <stop offset="100%" style="stop-color:#00d4aa"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        
+        <div class="stats-container">
+            <div class="stats-header">
+                <h2 class="stats-title">Aktueller Stand</h2>
+                <p class="stats-subtitle">Alle Kennzahlen basieren auf dem öffentlichen Ladesäulenregister der Bundesnetzagentur (BNetzA). Es handelt sich um eine amtliche, stichtagsbasierte Datengrundlage für öffentliche Ladeinfrastruktur.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Main Big Card - Ausbaupfad 2030 -->
+                <div class="bento-card bento-large" data-animate>
+                    <div class="bento-card-inner">
+                        <div class="bento-card-front">
+                            <div class="bento-card-content">
+                                <div class="progress-ring-container">
+                                    <svg class="progress-ring" viewBox="0 0 200 200">
+                                        <circle class="progress-ring-bg" cx="100" cy="100" r="85" />
+                                        <circle class="progress-ring-fill" cx="100" cy="100" r="85" data-progress="33" />
+                                    </svg>
+                                    <div class="progress-ring-text">
+                                        <span class="progress-number counter" data-count="33" data-no-percent="true">0</span>
+                                        <span class="progress-percent">%</span>
+                                    </div>
+                                </div>
+                                <div class="bento-card-info">
+                                    <h3>Ausbaupfad bis 2030</h3>
+                                    <p>527 von ca. 1.600 rechnerisch benötigten Ladepunkten – Einordnung des aktuellen Stands im Verhältnis zum modellierten Bedarf</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bento-card-back">
+                            <div class="back-content">
+                                <h4>Was bedeutet das?</h4>
+                                <p>Der Vergleich von aktuellem Bestand und modelliertem Bedarfswert macht die verbleibende Ausbaulücke bis 2030 sichtbar. Die Darstellung dient der Einordnung und ersetzt keine verbindliche Planung.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jährlicher Nettozuwachs -->
+                <div class="bento-card bento-medium" data-animate>
+                    <div class="bento-card-inner">
+                        <div class="bento-card-front">
+                            <div class="bento-icon"><span class="material-symbols-rounded">trending_up</span></div>
+                            <div class="bento-stat">
+                                <span class="bento-number-prefix">+</span>
+                                <span class="bento-number counter" data-count="66" data-no-percent="true">0</span>
+                                <span class="bento-number-suffix">Ladepunkte</span>
+                            </div>
+                            <h4>Jährlicher Nettozuwachs</h4>
+                            <p>Durchschnittlicher Zubau pro Jahr (Ø 2020–2025)</p>
+                            <div class="bento-sparkline">
+                                <div class="sparkline-item">
+                                    <div class="sparkline-bar" style="--height: 18%"></div>
+                                    <span class="sparkline-label">2020</span>
+                                </div>
+                                <div class="sparkline-item">
+                                    <div class="sparkline-bar" style="--height: 32%"></div>
+                                    <span class="sparkline-label">2021</span>
+                                </div>
+                                <div class="sparkline-item">
+                                    <div class="sparkline-bar" style="--height: 46%"></div>
+                                    <span class="sparkline-label">2022</span>
+                                </div>
+                                <div class="sparkline-item">
+                                    <div class="sparkline-bar" style="--height: 60%"></div>
+                                    <span class="sparkline-label">2023</span>
+                                </div>
+                                <div class="sparkline-item">
+                                    <div class="sparkline-bar" style="--height: 70%"></div>
+                                    <span class="sparkline-label">2024</span>
+                                </div>
+                                <div class="sparkline-item">
+                                    <div class="sparkline-bar active" style="--height: 88%"></div>
+                                    <span class="sparkline-label">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bento-card-back">
+                            <div class="back-content">
+                                <h4>Nettozuwachs erklärt</h4>
+<p>Der Wert beschreibt den historischen durchschnittlichen Zubau öffentlicher Ladepunkte (Ø 2020–2025). Im Bedarfsmodell bis 2030 ergibt sich ein deutlich höherer jährlicher Zubau.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ziel 2030 -->
+                <div class="bento-card bento-medium" data-animate>
+                    <div class="bento-card-inner">
+                        <div class="bento-card-front">
+                            <div class="bento-icon"><span class="material-symbols-rounded">flag</span></div>
+                            <div class="bento-stat">
+                                <span class="bento-number counter" data-count="1600">0</span>
+                            </div>
+                            <h4>Bedarf 2030 (Modell)</h4>
+                            <p>Rechnerischer Richtwert (kein offizieller Beschluss)</p>
+                            <div class="bento-badge">+1073 noch zu errichten</div>
+                        </div>
+                        <div class="bento-card-back">
+                            <div class="back-content">
+                                <h4>Zielsetzung</h4>
+<p>Der Wert von rund 1.600 Ladepunkten ergibt sich aus einer eigenen Hochrechnung auf Basis des prognostizierten Fahrzeugbestands und dient als theoretischer Bedarfswert.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DC Schnelllader > 22 kW -->
+                <div class="bento-card bento-small" data-animate>
+                    <div class="bento-card-inner">
+                        <div class="bento-card-front">
+                            <div class="bento-mini-ring">
+                                <svg viewBox="0 0 100 100">
+                                    <circle class="mini-ring-bg" cx="50" cy="50" r="40" />
+                                    <circle class="mini-ring-fill fast" cx="50" cy="50" r="40" data-progress="27" />
+                                </svg>
+                                <span class="mini-ring-icon fast"><span class="material-symbols-rounded">bolt</span></span>
+                            </div>
+                            <div class="bento-small-info">
+                                <span class="bento-small-number counter" data-count="142">0</span>
+                                <span class="bento-small-label">Schnell (BNetzA)</span>
+                            </div>
+                        </div>
+                        <div class="bento-card-back">
+                            <div class="back-content back-small">
+                                <p>Schnelllader für kurze Stopps an Hauptverkehrsachsen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AC Normallader ≤ 22 kW -->
+                <div class="bento-card bento-small" data-animate>
+                    <div class="bento-card-inner">
+                        <div class="bento-card-front">
+                            <div class="bento-mini-ring">
+                                <svg viewBox="0 0 100 100">
+                                    <circle class="mini-ring-bg" cx="50" cy="50" r="40" />
+                                    <circle class="mini-ring-fill normal" cx="50" cy="50" r="40" data-progress="73" />
+                                </svg>
+                                <span class="mini-ring-icon normal"><span class="material-symbols-rounded">power</span></span>
+                            </div>
+                            <div class="bento-small-info">
+                                <span class="bento-small-number counter" data-count="385">0</span>
+                                <span class="bento-small-label">Normal (BNetzA)</span>
+                            </div>
+                        </div>
+                        <div class="bento-card-back">
+                            <div class="back-content back-small">
+                                <p>Normallader für Wohnquartiere und längere Parkzeiten</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stichtags-Timeline -->
+                <div class="bento-card bento-wide" data-animate>
+                    <div class="bento-card-inner">
+                        <div class="bento-card-front">
+                            <h4 class="timeline-title">Stichtagsbasierte Entwicklung (BNetzA-Register)</h4>
+                            <div class="timeline-track">
+                                <div class="timeline-progress" data-progress="60"></div>
+                               <div class="timeline-point completed edge-left" style="--pos: 0%">
+  <span class="timeline-year">01/2020</span>
+  <span class="timeline-value">180</span>
+</div>
+
+<div class="timeline-point completed" style="--pos: 30%">
+  <span class="timeline-year">01/2023</span>
+  <span class="timeline-value">312</span>
+</div>
+
+<div class="timeline-point active" style="--pos: 60%">
+  <span class="timeline-year">01/2026</span>
+  <span class="timeline-value">527</span>
+</div>
+
+<div class="timeline-point edge-right" style="--pos: 100%">
+  <span class="timeline-year">Ziel 2030</span>
+  <span class="timeline-value">1600</span>
+</div>
+
+                            </div>
+                        </div>
+                        <div class="bento-card-back">
+                            <div class="back-content">
+                                <h4>Stichtagslogik</h4>
+                                <p>Die Bundesnetzagentur arbeitet mit Stichtagsdaten. Dies ermöglicht vergleichbare Zeitreihen und Trend-Analysen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flächendeckende Versorgung -->
+                <div class="bento-card bento-small-wide" data-animate>
+                    <div class="bento-card-inner">
+                        <div class="bento-card-front">
+                            <div class="bento-icon-small"><span class="material-symbols-rounded">map</span></div>
+                            <div class="bento-inline-stat">
+                                <span class="bento-small-number">22</span>
+                                <span class="bento-small-suffix">/27</span>
+                            </div>
+                            <div class="bento-small-text">
+                                <h4>Stadtteile versorgt</h4>
+                                <p>Flächendeckend nach BNetzA-Standortdaten</p>
+                            </div>
+                        </div>
+                        <div class="bento-card-back">
+                            <div class="back-content back-small">
+<p>22 von 27 Stadtteilen verfügen über mindestens einen öffentlichen Ladepunkt (BNetzA-Stichtag) – Grundversorgung ist weitgehend erreicht.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Datenqualität -->
+                <div class="bento-card bento-small-wide bento-highlight" data-animate>
+                    <div class="bento-card-inner">
+                        <div class="bento-card-front">
+                            <div class="bento-icon-small"><span class="material-symbols-rounded">verified</span></div>
+                            <div class="bento-small-text">
+                                <h4>Amtliche Datengrundlage</h4>
+                                <p>Quelle: Ladesäulenregister der Bundesnetzagentur (BNetzA)</p>
+                            </div>
+                        </div>
+                        <div class="bento-card-back">
+                            <div class="back-content back-small">
+                                <p>Die gesetzliche Meldepflicht sorgt f&uuml;r eine hohe Vollst&auml;ndigkeit und gute Vergleichbarkeit der Daten.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section id="visualized" class="ios-section">
+    <div class="ios-container">
+        <div class="ios-header">
+            <h2 class="section-title fade-in">Kennzahlen & Einordnung</h2>
+            <p class="ios-subtitle">Kennzahlen zur Ladeinfrastruktur</p>
+        </div>
+
+        <!-- iOS Segmented Control -->
+        <div class="ios-segmented-control">
+            <button class="ios-segment active" data-target="ios-panel1">Zielausbau</button>
+            <button class="ios-segment" data-target="ios-panel2">Ladearten</button>
+            <button class="ios-segment" data-target="ios-panel3">Öffentlich</button>
+            <button class="ios-segment" data-target="ios-panel4">Stadtteile</button>
+            <button class="ios-segment" data-target="ios-panel5">Szenario</button>
+            <div class="ios-segment-slider"></div>
+        </div>
+
+        <!-- Panels -->
+        <div class="ios-panels">
+            <!-- Panel 1: Zielausbau -->
+            <div class="ios-panel active" id="ios-panel1">
+                <div class="ios-card">
+                    <div class="ios-card-grid">
+                        <div class="ios-info-side">
+                            <div class="ios-info-header">
+                                <span class="ios-info-icon"><span class="material-symbols-rounded">bar_chart</span></span>
+                                <span class="ios-info-label">Ausbauziel 2030</span>
+                            </div>
+                            <div class="ios-info-main">
+                                <span class="ios-big-number">1.600</span>
+                                <span class="ios-big-unit">Ladepunkte</span>
+                            </div>
+                            <p class="ios-info-desc">Die Hochrechnung ergibt bis 2030 einen theoretischen Bedarfswert von rund 1.600 öffentlich zugänglichen Ladepunkten. Der Wert dient der Einordnung und ist keine verbindliche Planung.</p>
+                            
+                            <div class="ios-stats-row">
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">527</span>
+                                    <span class="ios-stat-label">Aktuell</span>
+                                </div>
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">+1.073</span>
+                                    <span class="ios-stat-label">Zusätzlicher Bedarf</span>
+                                </div>
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">33%</span>
+                                    <span class="ios-stat-label">Abgedeckt</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ios-chart-side">
+                            <iframe title="Entwicklung der öffentlichen Ladepunkte in Karlsruhe" aria-label="Flächen" id="datawrapper-chart-7CslY" src="https://datawrapper.dwcdn.net/7CslY/5/" scrolling="no" frameborder="0" style="border: none;" width="600" height="470" data-external="1"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Panel 2: Ladearten -->
+            <div class="ios-panel" id="ios-panel2">
+                <div class="ios-card">
+                    <div class="ios-card-grid">
+                        <div class="ios-info-side">
+                            <div class="ios-info-header">
+                                <span class="ios-info-icon"><span class="material-symbols-rounded">bolt</span></span>
+                                <span class="ios-info-label">Verteilung</span>
+                            </div>
+                            <div class="ios-info-main">
+                                <span class="ios-big-number">73:27</span>
+                                <span class="ios-big-unit">Normal : Schnell</span>
+                            </div>
+                            <p class="ios-info-desc">Normallader für Wohnquartiere, Schnelllader an Verkehrsachsen – optimiert für unterschiedliche Nutzungen.</p>
+                            
+                            <div class="ios-stats-row">
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">385</span>
+                                    <span class="ios-stat-label">Normal (BNetzA)</span>
+                                </div>
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">142</span>
+                                    <span class="ios-stat-label">Schnell (BNetzA)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ios-chart-side">
+                            <iframe title="Verteilung der Ladesäulen nach Typ" aria-label="Donut-diagramm" id="datawrapper-chart-k7nJG" src="https://datawrapper.dwcdn.net/k7nJG/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="483" data-external="1"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Öffentlich vs Privat -->
+            <div class="ios-panel" id="ios-panel3">
+                <div class="ios-card">
+                    <div class="ios-card-grid">
+                        <div class="ios-info-side">
+                            <div class="ios-info-header">
+                                <span class="ios-info-icon"><span class="material-symbols-rounded">lock_open</span></span>
+                                <span class="ios-info-label">Zugänglichkeit</span>
+                            </div>
+                            <div class="ios-info-main">
+                                <span class="ios-big-number">~20%</span>
+                                <span class="ios-big-unit">Öffentlich</span>
+                            </div>
+                            <p class="ios-info-desc">
+                              Einordnung: Der Gro&szlig;teil des Ladens findet typischerweise privat (z. B. zuhause/Arbeit) statt. &Ouml;ffentliche Ladepunkte sind die Erg&auml;nzung &ndash; besonders wichtig f&uuml;r Haushalte ohne eigenen Stellplatz. Die ~20% sind eine grobe Faustzahl zur Orientierung.
+                            </p>
+                            
+                            <div class="ios-stats-row">
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">~80%</span>
+                                    <span class="ios-stat-label">Privat</span>
+                                </div>
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">~20%</span>
+                                    <span class="ios-stat-label">Öffentlich</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ios-chart-side">
+                            <iframe title="Wo Karlsruhe neue Ladepunkte priorisiert" aria-label="Balken" id="datawrapper-chart-CoHFp" src="https://datawrapper.dwcdn.net/CoHFp/3/" scrolling="no" frameborder="0" style="border: none;" width="600" height="497" data-external="1"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 4: Stadtteile -->
+            <div class="ios-panel" id="ios-panel4">
+                <div class="ios-card">
+                    <div class="ios-card-grid">
+                        <div class="ios-info-side">
+                            <div class="ios-info-header">
+                                <span class="ios-info-icon"><span class="material-symbols-rounded">map</span></span>
+                                <span class="ios-info-label">Flächendeckung</span>
+                            </div>
+                            <div class="ios-info-main">
+                                <span class="ios-big-number">22/27</span>
+                                <span class="ios-big-unit">Stadtteile versorgt</span>
+                            </div>
+                            <p class="ios-info-desc">22 von 27 Stadtteilen verfügen über mindestens einen öffentlichen Ladepunkt (BNetzA-Stichtag) – Grundversorgung ist weitgehend erreicht.</p>
+                            
+                            <div class="ios-stats-row">
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">81%</span>
+                                    <span class="ios-stat-label">Abdeckung</span>
+                                </div>
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">15</span>
+                                    <span class="ios-stat-label">Ø pro Stadtteil</span>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="ios-chart-side">
+  <div class="ios-chart-scroll">
+<iframe title="Ladepunkte nach Stadtteilen in Karlsruhe" aria-label="Dot-Plot" id="datawrapper-chart-2FYVi" src="https://datawrapper.dwcdn.net/2FYVi/5/" scrolling="no" frameborder="0" style="border: none;" width="600" height="670" data-external="1"></iframe>
+  </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 5: Prognose -->
+            <div class="ios-panel" id="ios-panel5">
+                <div class="ios-card">
+                    <div class="ios-card-grid">
+                        <div class="ios-info-side">
+                            <div class="ios-info-header">
+                                <span class="ios-info-icon"><span class="material-symbols-rounded">trending_up</span></span>
+                                <span class="ios-info-label">Entwicklung</span>
+                            </div>
+                            <div class="ios-info-main">
+                                <span class="ios-big-number">+66</span>
+                                <span class="ios-big-unit">Ladepunkte pro Jahr</span>
+                            </div>
+                            <p class="ios-info-desc">Auf Basis des durchschnittlichen Nettozuwachses (Ø 2020–2025) wird eine lineare Trendfortschreibung bis 2030 dargestellt. Historischer Trend reicht nichts aus; erforderlich sind <strong>&asymp; 215 Ladepunkte pro Jahr</strong> (1.073 zus&auml;tzliche bis 2030 &divide; 5 Jahre).</p>
+                            
+                            <div class="ios-stats-row">
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">2030</span>
+                                    <span class="ios-stat-label">Zieljahr</span>
+                                </div>
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">5 J.</span>
+                                    <span class="ios-stat-label">Verbleibend</span>
+                                </div>
+                                <div class="ios-stat">
+                                    <span class="ios-stat-value">Nicht</span>
+                                    <span class="ios-stat-label">Auf Kurs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ios-chart-side">
+                            <iframe title="Ausbaupfade öffentlicher Ladepunkte in Karlsruhe bis 2030" aria-label="Liniendiagramm" id="datawrapper-chart-NRD5I" src="https://datawrapper.dwcdn.net/NRD5I/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="509" data-external="1"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    // Datawrapper resize
+    window.addEventListener("message", function(a) {
+        if (a.data["datawrapper-height"]) {
+            var iframes = document.querySelectorAll("iframe");
+            for (var t in a.data["datawrapper-height"]) {
+                for (var i = 0; i < iframes.length; i++) {
+                    if (iframes[i].contentWindow === a.source) {
+                        iframes[i].style.height = a.data["datawrapper-height"][t] + "px";
+                    }
+                }
+            }
+        }
+    });
+    
+    // iOS Segmented Control
+    const segments = document.querySelectorAll('.ios-segment');
+    const slider = document.querySelector('.ios-segment-slider');
+    
+    function updateSlider(activeBtn) {
+        const btnRect = activeBtn.getBoundingClientRect();
+        const containerRect = activeBtn.parentElement.getBoundingClientRect();
+        slider.style.width = btnRect.width + 'px';
+        slider.style.transform = `translateX(${btnRect.left - containerRect.left}px)`;
+    }
+    
+    segments.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            segments.forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.ios-panel').forEach(p => p.classList.remove('active'));
+            
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.target).classList.add('active');
+            updateSlider(btn);
+        });
+    });
+    
+    // Init slider position
+    window.addEventListener('load', () => {
+        const activeBtn = document.querySelector('.ios-segment.active');
+        if (activeBtn) updateSlider(activeBtn);
+    });
+    window.addEventListener('resize', () => {
+        const activeBtn = document.querySelector('.ios-segment.active');
+        if (activeBtn) updateSlider(activeBtn);
+    });
+    </script>
+</section>
+
+
+
+    <!-- Simulation Section -->
+    <section id="simulation" class="simulation-section">
+        <div class="section">
+            <h2 class="section-title fade-in">Simulation</h2>
+            <p class="simulation-subtitle">Die Simulation übersetzt die Planungsziele in eine interaktive Perspektive: Wie verändern Standortwahl und Ladearten die Nutzbarkeit im Alltag?</p>
+            
+            <a href="Ladesäule/index.html" class="simulation-preview-link">
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="browser-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="browser-address">
+                            <span class="material-symbols-rounded lock-icon">lock</span> karlsruhe-ladeplan.de/simulation
+                        </div>
+                    </div>
+                    <div class="browser-content">
+                        <img src="Screenshot Simulation.png" alt="Simulation Vorschau - Interaktive Karte der Ladeinfrastruktur">
+                        <div class="preview-overlay">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <span class="preview-text">Interaktive Karte starten</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+<section id="survey" class="survey-section">
+    <div class="survey-symbols">
+        <span class="survey-symbol">?</span>
+        <span class="survey-symbol">%</span>
+        <span class="survey-symbol">?</span>
+        <span class="survey-symbol">%</span>
+        <span class="survey-symbol">?</span>
+        <span class="survey-symbol">%</span>
+        <span class="survey-symbol">?</span>
+        <span class="survey-symbol">%</span>
+        <span class="survey-symbol">?</span>
+        <span class="survey-symbol">%</span>
+        <span class="survey-symbol">?</span>
+    </div>
+  <div class="section">
+    <h2 class="section-title fade-in">Umfrage</h2>
+            <p class="survey-subtitle">Die Umfrage erfasst Wahrnehmung und Prioritäten: Wo erwarten Nutzerinnen und Nutzer Ladebedarf, und welche Ladearten werden bevorzugt? Die Ergebnisse dienen als qualitative Ergänzung zur datenbasierten Analyse.</p>
+
+    <div class="survey-card">
+      <div id="survey-content">
+        <!-- Fragen und Ergebnisse werden per JavaScript eingesetzt -->
+      </div>
+    <!-- Reset-Button entfernt, wird im Footer versteckt eingefügt -->
+    </div>
+  </div>
+</section>
+
+  <!-- Zukunfts Mika: Hier soll n button sein wo man die Ergebnisse aller Leute sehen kann (deswegen Umfrage) -->
+
+<!-- SUMMARY / NEXT STEPS -->
+<section id="summary-next-steps" class="summary-next">
+  <div class="summary-wrap">
+    <div class="summary-hero">
+      <div class="summary-hero-content">
+        <span class="summary-kicker">Kurzfazit</span>
+        <div class="summary-head">
+          <h2>Zusammenfassung &amp; Wie geht es jetzt weiter?</h2>
+          <p class="summary-sub">
+            Die wichtigsten Erkenntnisse aus Ist-Stand, Visualisierung und Simulation &ndash; plus konkrete n&auml;chste Schritte.
+          </p>
+        </div>
+
+        <div class="summary-kpis">
+          <div class="summary-kpi">
+            <span class="summary-kpi-label">Aktuell</span>
+            <span class="summary-kpi-value"><span class="counter" data-count="527">0</span></span>
+            <span class="summary-kpi-unit">Ladepunkte</span>
+          </div>
+          <div class="summary-kpi">
+            <span class="summary-kpi-label">Ziel 2030</span>
+            <span class="summary-kpi-value"><span class="counter" data-count="1600">0</span></span>
+            <span class="summary-kpi-unit">Ladepunkte</span>
+          </div>
+          <div class="summary-kpi">
+            <span class="summary-kpi-label">L&uuml;cke</span>
+            <span class="summary-kpi-value"><span class="counter" data-count="1073">0</span></span>
+            <span class="summary-kpi-unit">zus&auml;tzlich</span>
+          </div>
+        </div>
+      </div>
+
+        <div class="summary-hero-media" aria-hidden="true">
+          <div class="summary-media-frame">
+            <picture>
+              <source srcset="images/charge.avif" type="image/avif">
+              <img src="images/about-image-01.jpg" alt="Lades&auml;ule in urbaner Umgebung">
+            </picture>
+            <div class="summary-media-shine"></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="summary-grid">
+      <!-- Key findings -->
+      <article class="summary-card">
+        <h3>Wichtigste Erkenntnisse</h3>
+        <ul class="summary-list">
+          <li>
+            <strong>Ist-Stand (Stichtag):</strong>
+            Die Ladeinfrastruktur ist insgesamt gewachsen, aber die Verteilung ist nicht &uuml;berall gleichm&auml;&szlig;ig.
+          </li>
+          <li>
+            <strong>R&auml;umliche Muster:</strong>
+            Hohe Dichte an zentralen Achsen/Hotspots; einzelne Wohnquartiere bleiben vergleichsweise schwach versorgt.
+          </li>
+          <li>
+            <strong>Leistung &amp; Nutzbarkeit:</strong>
+            Schnellladen ist punktuell stark, AC-Laden ist breit vorhanden &ndash; die Frage ist die Platzierung am Bedarf.
+          </li>
+          <li>
+            <strong>2030-Perspektive:</strong>
+            Ohne Priorisierung k&ouml;nnen lokale Engp&auml;sse entstehen (Wartezeiten/Belegung), selbst wenn die Gesamtzahl steigt.
+          </li>
+        </ul>
+      </article>
+
+      <!-- What to do now -->
+      <article class="summary-card">
+        <h3>Wie geht es jetzt weiter?</h3>
+        <ol class="summary-steps">
+          <li>
+            <strong>Datengrundlage finalisieren:</strong>
+            Stichtag und Datenquellen konsistent dokumentieren (Ist-Stand vs. Simulation).
+          </li>
+          <li>
+            <strong>Priorit&auml;ten ableiten:</strong>
+            Stadtteile/PLZ mit niedriger Dichte und hoher Nachfrage identifizieren und priorisieren.
+          </li>
+          <li>
+            <strong>Ausbaupfad konkretisieren:</strong>
+            Pro Jahr realistische Zubauzahlen (AC/DC) definieren und im Modell nachvollziehbar machen.
+          </li>
+          <li>
+            <strong>Feedback integrieren:</strong>
+            Umfrageergebnisse aggregiert anzeigen und als Input f&uuml;r die Priorisierung nutzen.
+          </li>
+        </ol>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Back to top -->
+<a href="#home" id="backToTop" class="back-to-top" aria-label="Zurück nach oben">↑</a>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.h-ka.de/indb">Hochschule Karlsruhe</a>
+                <a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/E-Mobilitaet/Ladesaeulenkarte/start.html">Bundesnetzagentur</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Mika Stutzenberger, Fynn Ulrich
+            </div>
+            <button id="resetBtn" title="Umfrage zurücksetzen" style="background:none; border:none; cursor:pointer; font-size:1.7rem; color:#64748b; margin-left:18px; vertical-align:middle;">
+                <span style="pointer-events:none;">&#x21bb;</span>
+            </button>
+        </div>
+    </footer>
+<script src="tooplate-strategic-scripts.js"></script>
+<!-- PDF-Embed -->
+<div id="pdfEmbed1" class="pdf-overlay" aria-hidden="true">
+        <div id="pdfModalContent1" class="pdf-modal" role="dialog" aria-modal="true" aria-label="Rahmenkonzept PDF">
+                <button type="button" class="pdf-close" aria-label="Schließen">&times;</button>
+                <iframe id="pdfFrame1" src="Rahmenkonzept_E-Ladeinfrastruktur_Fortschreibung_2025.pdf#page=1" width="100%" height="100%" style="border:none;"></iframe>
+        </div>
+</div>
+<script>
+// PDF-Link-Logik für alle markierten Stellen
+const pdfOverlay = document.getElementById('pdfEmbed1');
+const pdfFrame = document.getElementById('pdfFrame1');
+const pdfCloseBtn = document.querySelector('.pdf-close');
+
+const pdfLinks = [
+    { id: 'pdfLinkQ1', page: 5 },
+    { id: 'pdfLinkQ2', page: 9 },
+    { id: 'pdfLinkQ3', page: 10 },
+    { id: 'pdfLinkQ4', page: 7 },
+    { id: 'pdfLinkQ5', page: 7 },
+    { id: 'pdfLinkQ6', page: 7 }
+];
+
+function openPdf(page) {
+    if (!pdfOverlay || !pdfFrame) return;
+    pdfOverlay.classList.add('active');
+    pdfOverlay.setAttribute('aria-hidden', 'false');
+    pdfFrame.src = 'Rahmenkonzept_E-Ladeinfrastruktur_Fortschreibung_2025.pdf#page=' + page;
+    document.body.style.overflow = 'hidden';
+}
+
+function closePdf() {
+    if (!pdfOverlay) return;
+    pdfOverlay.classList.remove('active');
+    pdfOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+pdfLinks.forEach(function(link) {
+    const el = document.getElementById(link.id);
+    if (el) {
+        el.onclick = function(e) {
+            e.preventDefault();
+            openPdf(link.page);
+        };
+    }
+});
+
+if (pdfCloseBtn) {
+    pdfCloseBtn.addEventListener('click', closePdf);
+}
+
+if (pdfOverlay) {
+    pdfOverlay.addEventListener('click', (e) => {
+        if (e.target === pdfOverlay) {
+            closePdf();
+        }
+    });
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && pdfOverlay && pdfOverlay.classList.contains('active')) {
+        closePdf();
+    }
+});
+</script>
+
+</body>
+</html>
