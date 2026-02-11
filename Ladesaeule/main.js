@@ -8,6 +8,53 @@ let districtsLayer;
 let selectedMarker = null;
 let allDistrictLayers = []; // Hilfsspeicher
 
+function formatHubType(rawType) {
+  const normalized = String(rawType || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '_');
+
+  const map = {
+    parking: 'Parkplatz',
+    parking_entrance: 'Parkhauseinfahrt',
+    fuel: 'Tankstelle',
+    retail: 'Einzelhandel'
+  };
+
+  return map[normalized] || normalized.replace(/_/g, ' ');
+}
+
+function formatBegruendung(raw) {
+  const text = String(raw || '').trim();
+  if (!text) return '';
+
+  const acMatch = text.match(/AC score\s*=\s*([0-9.]+)\s*;?\s*ist_ac\s*=\s*([0-9.]+)/i);
+  if (acMatch) {
+    const score = acMatch[1];
+    const existing = acMatch[2];
+    return `<br><strong>Begründung (vereinfacht)</strong>` +
+      `<br>Modell-Score (AC): ${score}/100` +
+      `<br>Vorhandene AC-Ladepunkte: ${existing}`;
+  }
+
+  const dcMatch = text.match(/DC-?hub score\s*=\s*([0-9.]+)\s*\(([^)]+)\)/i);
+  if (dcMatch) {
+    const score = dcMatch[1];
+    const locationType = formatHubType(dcMatch[2]);
+    return `<br><strong>Begründung (vereinfacht)</strong>` +
+      `<br>Modell-Score (DC-Hub): ${score}/100` +
+      `<br>Standorttyp: ${locationType}`;
+  }
+
+  const cleaned = text
+    .replace(/AC score/ig, 'Modell-Score (AC)')
+    .replace(/DC-?hub score/ig, 'Modell-Score (DC-Hub)')
+    .replace(/ist_ac/ig, 'vorhandene AC-Ladepunkte')
+    .replace(/_/g, ' ');
+
+  return `<br><strong>Begründung (vereinfacht)</strong><br>${cleaned}`;
+}
+
 function syncNavHeight() {
   const nav = document.querySelector('.navbar');
   if (!nav) return;
@@ -359,7 +406,8 @@ function loadData() {
 
             if (!isNaN(lat) && !isNaN(lng)) {
               const stadtteil = station["Stadtteil"] ? `<br>Stadtteil: ${station["Stadtteil"]}` : "";
-              const begruendung = station["Begründung"] ? `<br>Begründung: ${station["Begründung"]}` : "";
+              const begruendungRaw = station["Begr\u00fcndung"] || station["Begründung"] || "";
+              const begruendung = formatBegruendung(begruendungRaw);
 
               const popup = `
                 <strong style='display:block;margin-bottom:8px;'>Geplant 2030</strong>
