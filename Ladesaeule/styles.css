@@ -407,8 +407,8 @@ body {
 
 .leaflet-popup-content {
   margin: 0;
-  width: auto !important;
-  max-width: 400px;
+  width: 360px !important;
+  max-width: 520px;
 }
 
 .leaflet-popup-content p {
@@ -418,6 +418,14 @@ body {
 .leaflet-popup-content iframe {
   border-radius: 8px;
   margin-top: 10px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .leaflet-popup-content {
+    width: 280px !important;
+    max-width: 90vw;
+  }
 }
 
 .leaflet-popup-close-button {
